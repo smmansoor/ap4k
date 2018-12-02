@@ -43,7 +43,7 @@ import javax.annotation.Generated;
       "image",
       "env",
       "feature",
-      "link"
+      "links"
       })
       @Buildable(editableEnabled = false, validationEnabled = false, generateBuilderPackage = false, builderPackage = "io.ap4k.deps.kubernetes.api.builder", inline = @Inline(type = Doneable.class, prefix = "Doneable", value = "done"))
       public class ComponentSpec {
@@ -61,12 +61,12 @@ import javax.annotation.Generated;
         private Env[] env;
         private Service[] service;
         private Feature[] feature;
-        private Link[] link;
+        private Link[] links;
 
         public ComponentSpec() {
         }
 
-        public ComponentSpec(String name, String packagingMode, String type, DeploymentType deploymentMode, String runtime, String version, boolean exposeService, String cpu, Storage storage, Image[] image, Env[] env, Service[] service, Feature[] feature, Link[] link) {
+        public ComponentSpec(String name, String packagingMode, String type, DeploymentType deploymentMode, String runtime, String version, boolean exposeService, String cpu, Storage storage, Image[] image, Env[] env, Service[] service, Feature[] feature, Link[] links) {
           this.name = name;
           this.packagingMode = packagingMode;
           this.type = type;
@@ -80,7 +80,7 @@ import javax.annotation.Generated;
           this.env = env;
           this.service = service;
           this.feature = feature;
-          this.link = link;
+          this.links = links;
         }
 
         public String getName() {
@@ -188,10 +188,10 @@ import javax.annotation.Generated;
         }
 
         public Link[] getLink() {
-          return link;
+          return links;
         }
 
-        public void setLink(Link[] link) {
-          this.link = link;
+        public void setLink(Link[] links) {
+          this.links = links;
         }
       }
